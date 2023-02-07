@@ -1,6 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Navigate,
+} from 'react-router-dom';
 
 import './index.css';
 import { App } from './App';
@@ -26,6 +30,10 @@ const router = createBrowserRouter([
       {
         path: 'contact/:id',
         element: <ContactDetails />,
+      },
+      {
+        path: 'oldcontact',
+        element: <Navigate to='/contact' />,
       },
     ],
   },
