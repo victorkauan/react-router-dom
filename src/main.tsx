@@ -6,6 +6,7 @@ import './index.css';
 import { App } from './App';
 import { Home } from './pages/Home';
 import { Contact } from './pages/Contact';
+import { ContactDetails } from './pages/ContactDetails';
 import { Error } from './pages/Error';
 
 const router = createBrowserRouter([
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
       {
         path: 'contact',
         element: <Contact />,
+      },
+      {
+        path: 'contact/:id',
+        element: <ContactDetails />,
       },
     ],
   },
